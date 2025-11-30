@@ -1,5 +1,5 @@
 {
-  "name": "next-template",
+  "name": "objective-price",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "pre-commit": "npm run test && npm run lint-format",
     "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "test:unit": "vitest run --dir tests/unit",
-    "test:integration": "vitest run --dir tests/integration --disable-console-intercept",
+    "test:integration": "vitest run --dir tests/integration --disable-console-intercept --passWithNoTests",
     "test:e2e": "npm run build && start-server-and-test start http://localhost:3000 'npx playwright test'",
     "test:specific": "npx playwright test -g",
     "playwright": "npx playwright test --ui"
